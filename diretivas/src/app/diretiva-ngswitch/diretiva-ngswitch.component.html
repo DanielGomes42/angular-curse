@@ -1,7 +1,7 @@
 <nav class="navbar navbar-dark bg-primary">
   <div class="nav navbar-nav">
     <a class="nav-item nav-link"
-       [class.active]="aba == 'essa'"
+      [class.active]="aba == 'essa'"  
        (click)="aba = 'essa'">essa</a>
     <a class="nav-item nav-link"
       [class.active]="aba == 'mapa'"
@@ -13,9 +13,10 @@
 </nav>
 
 <div class="container" [ngSwitch]="aba"  >
+  
   <p *ngSwitchCase="'mapa'">Modo Mapa ativado</p>
   <p *ngSwitchCase="'lista'">Modo Lista ativado</p>
-  <p *ngSwitchDefault>Home</p>
+  <p *ngSwitchDefault>mode Home</p>
 </div>
 
 <h5>Removendo o * e usando template</h5>

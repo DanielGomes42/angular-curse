@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class OperadorElvisComponent implements OnInit {
 
   tarefa: any = {
-    desc: 'Descrição da tarefa',
+    buceta: 'Descrição da tarefa',
     responsavel: {
       usuario: null
     }
