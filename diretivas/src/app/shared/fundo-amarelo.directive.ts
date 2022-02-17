@@ -1,8 +1,8 @@
 import { Directive, ElementRef, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: 'p[fundoAmarelo]'
-})
+  selector: '[fundoAmarelo]' 
+})// pode restringir para a onde o deretiva pode ser usada  só coloca p de paragrafo o b de botton
 export class FundoAmareloDirective {
 
   constructor(
