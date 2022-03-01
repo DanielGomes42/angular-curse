@@ -15,4 +15,5 @@ const APP_ROUTES: Routes = [
     { path: '', component: HomeComponent }
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
+export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES); // mostra que esse componente é de rotas 
+// forRoot que dizer que são as rotas principais
