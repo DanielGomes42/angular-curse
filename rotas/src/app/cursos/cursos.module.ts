@@ -11,7 +11,7 @@ import { CursoFormComponent } from './curso-form/curso-form.component';
 
 @NgModule({
     imports: [
-        CommonModule,
+        CommonModule, // tem diretivas ng if ngfor
         CursosRoutingModule
         //RouterModule
     ],

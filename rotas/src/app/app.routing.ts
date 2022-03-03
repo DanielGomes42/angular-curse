@@ -9,9 +9,8 @@ import { LoginComponent } from './login/login.component';
 
 const APP_ROUTES: Routes = [
     { path: 'cursos', component: CursosComponent },
-    { path: 'curso/:id', component: CursoDetalheComponent },
+    { path: 'curso/:id', component: CursoDetalheComponent }, // passando parametro
     { path: 'login', component: LoginComponent },
-    { path: 'naoEncontrado', component: CursoNaoEncontradoComponent },
     { path: '', component: HomeComponent }
 ];
 

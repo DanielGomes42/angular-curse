@@ -13,7 +13,7 @@ const cursosRoutes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(cursosRoutes)],
+    imports: [RouterModule.forChild(cursosRoutes)], // forChild pis é um modulo de funcionalidade
     exports: [RouterModule]
 })
 export class CursosRoutingModule {}
