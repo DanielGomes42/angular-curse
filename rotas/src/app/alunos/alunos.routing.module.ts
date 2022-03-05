@@ -7,11 +7,11 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { AlunoDetalheResolver } from './guards/aluno-detalhe.resolver';
 
-const alunosRoutes = [
+const alunosRoutes = [ // variavel das rotas 
     {path: '', component: AlunosComponent, 
      canActivateChild: [AlunosGuard],
      children : [
-        {path: 'novo', component: AlunoFormComponent},
+        {path: 'novo', component: AlunoFormComponent}, // path e depois o nome da rota em si que tu vai usa no html depous com routerLink
         {path: ':id', component: AlunoDetalheComponent,
             resolve: { aluno : AlunoDetalheResolver }
         },
@@ -22,7 +22,7 @@ const alunosRoutes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(alunosRoutes)],
-    exports: [RouterModule]
+    imports: [RouterModule.forChild(alunosRoutes)], // modulo de funcionalidade 
+    exports: [RouterModule] // acesso as diretivas 
 })
-export class AlunosRoutingModule {}
+export class AlunosRoutingModule {} 
