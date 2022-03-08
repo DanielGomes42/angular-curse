@@ -8,7 +8,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import { LoginComponent } from './login/login.component';
 
 const APP_ROUTES: Routes = [
-    { path: 'cursos', component: CursosComponent },
+    { path: 'cursos', component: CursosComponent },// nome : cursos - para onde vai : CursosComponent
     { path: 'curso/:id', component: CursoDetalheComponent }, // passando parametro
     { path: 'login', component: LoginComponent },
     { path: '', component: HomeComponent }

@@ -5,17 +5,17 @@ import { CanActivateChild, ActivatedRouteSnapshot, RouterStateSnapshot } from '@
 @Injectable()
 export class AlunosGuard implements CanActivateChild {
 
-    	canActivateChild(
+canActivateChild(
             route: ActivatedRouteSnapshot,
             state: RouterStateSnapshot
-        ): Observable<boolean>|boolean {
+        ): Observable<boolean>|boolean {  // isso é uma chamada assincrona
 
             //console.log(route);
             //console.log(state);
 
             console.log('AlunosGuard: Guarda de rota filha');
 
-            if (state.url.includes('editar')){
+            if (state.url.includes('editar')){ // se o url tiver editar 
                 //alert('Usuário sem acesso');
                 //return Observable.of(false);
             }

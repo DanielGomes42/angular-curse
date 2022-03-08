@@ -16,13 +16,13 @@ export class AuthService {
   fazerLogin(usuario: Usuario){
 
     if (usuario.nome === 'usuario@email.com' && 
-      usuario.senha === '123456') {
+      usuario.senha === '123456') { // aqui é a validação se fosse um projeto real mandaria para um banco de dados e ele validaria
 
       this.usuarioAutenticado = true;
 
       this.mostrarMenuEmitter.emit(true);
 
-      this.router.navigate(['/']);
+      this.router.navigate(['/']); // navega pra home page que é so /
 
     } else {
       this.usuarioAutenticado = false;

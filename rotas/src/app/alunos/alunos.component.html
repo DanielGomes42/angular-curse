@@ -1,5 +1,6 @@
 <div class="row">
-  <div class="col s6">
+  <div class="col s6"> 
+    <!--  aqui é do matearile para colocar em gride e ocupar s6 ocupar 6 espaçp de 12 da tela  -->
     <p>
       Lista de Alunos
     </p>
@@ -7,13 +8,16 @@
     <div class="collection">
       <a class="collection-item"
       *ngFor="let aluno of alunos"
-      [routerLink]="[aluno.id]">
+      [routerLink]="[aluno.id]">  
+      <!-- aluno.id é aluno detale configura na route.module -->
+      <!-- rota filha por isso só coloca [aluno.id] e nao routerLink="[/Alunos/,alunos.id]" -->
       {{ aluno.nome }}
       </a>
     </div>
   </div>
 
 <div class="col s6">
-  <router-outlet></router-outlet>
+  <router-outlet></router-outlet> 
+  <!-- como é rota filha ele abre o aluno.id aqui nesse router -->
 </div>
 </div>

@@ -12,7 +12,7 @@ const alunosRoutes = [ // variavel das rotas
      canActivateChild: [AlunosGuard],
      children : [
         {path: 'novo', component: AlunoFormComponent}, // path e depois o nome da rota em si que tu vai usa no html depous com routerLink
-        {path: ':id', component: AlunoDetalheComponent,
+        {path: ':id', component: AlunoDetalheComponent,// quando coloco no browser alunos/:id (algum id ) ele vai para alunodetale
             resolve: { aluno : AlunoDetalheResolver }
         },
         {path: ':id/editar', component: AlunoFormComponent,

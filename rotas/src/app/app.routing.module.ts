@@ -15,7 +15,7 @@ import { AuthGuard } from './guards/auth.guard';
 const appRoutes: Routes = [
     { path: 'cursos', 
         loadChildren: 'app/cursos/cursos.module#CursosModule',
-        canActivate: [AuthGuard],
+        canActivate: [AuthGuard], // aqui é o guarda de rota que construi no auth.guard.ts
         canActivateChild: [CursosGuard],
         canLoad: [AuthGuard]
     },
