@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Rx';
 import { ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } from '@angular/router';
 
 @Injectable()
-export class AlunoDetalheResolver implements Resolve<Aluno> {
+export class AlunoDetalheResolver implements Resolve<Aluno> { // faz carregar o componente antes 
 
     constructor(private alunosService: AlunosService) {}
 
@@ -16,7 +16,7 @@ export class AlunoDetalheResolver implements Resolve<Aluno> {
 
             console.log('AlunoDetalheResolver');
             
-            let id = route.params['id'];
+            let id = route.params['id']; 
             
             return this.alunosService.getAluno(id);
     }
