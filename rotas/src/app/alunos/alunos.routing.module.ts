@@ -7,8 +7,8 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { AlunoDetalheResolver } from './guards/aluno-detalhe.resolver';
 
-const alunosRoutes = [ // variavel das rotas 
-    {path: '', component: AlunosComponent, 
+const alunosRoutes = [ // variavel das rotas
+    {path: '', component: AlunosComponent,
      canActivateChild: [AlunosGuard],
      children : [
         {path: 'novo', component: AlunoFormComponent}, // path e depois o nome da rota em si que tu vai usa no html depous com routerLink
@@ -16,13 +16,13 @@ const alunosRoutes = [ // variavel das rotas
             resolve: { aluno : AlunoDetalheResolver }
         },
         {path: ':id/editar', component: AlunoFormComponent,
-            canDeactivate: [AlunosDeactivateGuard]
-        }
+            canDeactivate: [AlunosDeactivateGuard]//marcação do serviço alunos-deactivate.guard.ts
+        } // aqui acredito que deveria ser IFormCanDeactivate
     ]}
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(alunosRoutes)], // modulo de funcionalidade 
-    exports: [RouterModule] // acesso as diretivas 
+    imports: [RouterModule.forChild(alunosRoutes)], // modulo de funcionalidade
+    exports: [RouterModule] // acesso as diretivas
 })
-export class AlunosRoutingModule {} 
+export class AlunosRoutingModule {}

@@ -43,18 +43,23 @@ export class AlunoFormComponent implements OnInit, IFormCanDeactivate {
     console.log('mudou');
   }
 
-  podeMudarRota(){
+  podeMudarRota(){ // metodo que está indo para o serviço alunos deactivate.guard  (só é ativado quando mudar algo no formulario)
 
-    if (this.formMudou) {
-      confirm('Tem certeza que deseja sair dessa página?');
+    if (this.formMudou) {  //se formMudou acontecer -> mostre tem certeza que desaj sair dessa pagina
+      confirm('Tem certeza que deseja sair dessa página?'); // aqui que decide o confirma ja manda um cancel ou ok
+      // se clicar em ok o metodo continua e manda treu la para o serviço que navega para a
     }
 
-    return true;
+    return true; // se todo o metodo de cima  acontecer que dizer que ele é true
 
   }
 
   podeDesativar(){
-    return this.podeMudarRota();
+    return this.podeMudarRota(); //aqui fala que podemudar rota é podeDesativar rota
+    //lembrando podeDesativar rota é de fato o serviço guard (alunos-deactivate.guard.ts)
   }
 
 }
+
+// então tu criar um serviço alunos-deactivate , ai nessa pagina aqui tu escuta o formularia , se ele mudar tu manda
+// para o serviço que mudou e la no serviço ele vai mostra a msg se quer mudar ou não
