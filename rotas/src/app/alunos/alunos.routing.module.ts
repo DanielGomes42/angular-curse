@@ -13,7 +13,7 @@ const alunosRoutes = [ // variavel das rotas
      children : [
         {path: 'novo', component: AlunoFormComponent}, // path e depois o nome da rota em si que tu vai usa no html depous com routerLink
         {path: ':id', component: AlunoDetalheComponent,// quando coloco no browser alunos/:id (algum id ) ele vai para alunodetale
-            resolve: { aluno : AlunoDetalheResolver }
+            resolve: { aluno : AlunoDetalheResolver } // aqui o resolver carrega os dados
         },
         {path: ':id/editar', component: AlunoFormComponent,
             canDeactivate: [AlunosDeactivateGuard]//marcação do serviço alunos-deactivate.guard.ts

@@ -9,15 +9,15 @@ export class AlunoDetalheResolver implements Resolve<Aluno> { // faz carregar o 
 
     constructor(private alunosService: AlunosService) {}
 
-    resolve(
+    resolve( // metodo  para carregar as informaçoes
         route: ActivatedRouteSnapshot, // foto da rota
         state: RouterStateSnapshot // stado da rota
         ): Observable<any>|Promise<any>|any {
 
             console.log('AlunoDetalheResolver');
 
-            let id = route.params['id'];
+            let id = route.params['id']; // pego o id da rota 
 
-            return this.alunosService.getAluno(id);
+            return this.alunosService.getAluno(id); // retorna o id especifico 
     }
 }

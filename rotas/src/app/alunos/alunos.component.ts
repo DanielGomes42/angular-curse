@@ -9,12 +9,12 @@ import { AlunosService } from './alunos.service';
 })
 export class AlunosComponent implements OnInit {
 
-  private alunos: any[] = [];
+  private alunos: any[] = []; // informaçoes dadas do service
 
   constructor(private alunosService: AlunosService) { }
 
   ngOnInit() {
-    this.alunos = this.alunosService.getAlunos();
+    this.alunos = this.alunosService.getAlunos();// informaçoes dadas do service
   }
 
 }

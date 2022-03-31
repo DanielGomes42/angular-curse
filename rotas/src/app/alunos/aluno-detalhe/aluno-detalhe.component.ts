@@ -3,7 +3,7 @@ import { AlunosService } from './../alunos.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Aluno } from './../aluno';
+import { Aluno } from './../aluno'; // tipo da constante
 
 @Component({
   selector: 'app-aluno-detalhe',
